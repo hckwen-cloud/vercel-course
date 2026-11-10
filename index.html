@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vercel 실습 교재</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>📘 Vercel 실습 교재</h1>
+  <span class="sub">나의 주식매매일지를 웹 앱으로 올리고 휴대폰에 설치하기</span>
+  <span class="grow"></span>
+  <span class="stepno" id="stepNo">1 / 1</span>
+  <div class="prog"><i id="progBar"></i></div>
+</header>
+
+<main class="layout">
+  <section class="left">
+    <div id="stageWrap">
+      <div id="stage">
+        <div id="screen"></div>
+        <div id="fx"></div>
+        <div id="cursor"><svg viewBox="0 0 24 24"><path d="M3 2 L3 19 L7.5 14.8 L10.6 21.6 L13.6 20.3 L10.6 13.6 L16.8 13.6 Z" fill="#fff" stroke="#111" stroke-width="1.4" stroke-linejoin="round"/></svg></div>
+        <div id="caption"></div>
+      </div>
+    </div>
+    <div class="mockNote">왼쪽은 실습용 <b>모의 화면</b>이에요. 실제 사이트는 메뉴 이름이나 위치가 조금 다를 수 있어요.</div>
+  </section>
+
+  <aside class="right">
+    <div class="panelScroll">
+      <select id="toc" aria-label="단계 선택"></select>
+      <div class="chap" id="chap"></div>
+      <h2 id="title"></h2>
+      <ol id="script"></ol>
+      <div id="extra"></div>
+      <label class="doneChk"><input type="checkbox" id="doneChk"> 이 단계 실습을 마쳤어요</label>
+    </div>
+    <div class="controls">
+      <div class="btns">
+        <button id="prev">◀ 이전</button>
+        <button id="play">▶ 재생</button>
+        <button id="replay">↺ 다시</button>
+        <button id="next">다음 ▶</button>
+      </div>
+      <div class="opts">
+        <label><input type="checkbox" id="optVoice"> 🔊 음성</label>
+        <select id="optVoiceName" aria-label="목소리"></select>
+        <label>속도 <input type="range" id="optRate" min="0.7" max="1.6" step="0.05"></label>
+        <label><input type="checkbox" id="optCap"> 자막</label>
+        <label><input type="checkbox" id="optAuto"> 다음 단계 자동 진행</label>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<div id="startOv">
+  <div class="card">
+    <div style="font-size:44px">📈 → 🌐 → 📱</div>
+    <h2>나의 주식매매일지, 앱으로 올리기</h2>
+    <p>Vercel 완전 초보 실습 교재 · <span id="ovCount">8개 장</span> · 약 100분</p>
+    <ul>
+      <li>왼쪽 화면에서 커서가 움직이며 시연해요.</li>
+      <li>오른쪽 설명을 음성으로 읽어 줘요. (스피커를 켜 주세요)</li>
+      <li>단계마다 <b>직접 해 보세요</b>의 링크를 새 탭으로 열어 따라 하세요.</li>
+      <li>단축키: <b>→</b> 다음, <b>←</b> 이전, <b>Space</b> 재생/일시정지</li>
+    </ul>
+    <button class="go" id="startBtn">▶ 강의 시작하기</button>
+    <button class="again hidden" id="restartBtn">처음부터 다시 시작</button>
+  </div>
+</div>
+
+<script src="screens.js"></script>
+<script src="lessons.js"></script>
+<script src="engine.js"></script>
+</body>
+</html>
